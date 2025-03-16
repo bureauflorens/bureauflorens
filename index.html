@@ -1,9 +1,25 @@
-        /* Logo Styling */
+        @keyframes zoomBackground {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }        .tagline {
+            font-size: 12px;
+            margin-bottom: 8px;
+            color: #5D9C59;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }        /* Logo Styling */
         .logo {
             display: block;
-            height: 50px;
+            max-height: 15px;
+            max-width: 120px; /* Strikte maximumbreedte */
             width: auto;
-            margin-top: 10px;
+            height: auto;
+            margin: 0 auto 12px auto;
+            object-fit: contain; /* Zorgt dat de verhoudingen behouden blijven */
         }<!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -35,70 +51,67 @@
         }
         
         header {
-            background: #2c3e50;
-            color: white;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #5D9C59 3px solid;
+            background: white;
+            color: #2c3e50;
+            padding: 15px 0;
+            min-height: 80px;
+            border-bottom: #5D9C59 1px solid;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 100;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
         header a {
-            color: #ffffff;
+            color: #2c3e50;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 15px;
+            transition: color 0.3s;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
         
         header ul {
             padding: 0;
             list-style: none;
+            margin-top: 10px;
         }
         
         header li {
-            display: inline;
-            padding: 0 20px 0 20px;
+            display: inline-block;
+            padding: 0 18px;
         }
         
         header #branding {
-            float: left;
-        }
-        
-        header #branding h1 {
-            margin: 0;
-            font-weight: 500;
-            letter-spacing: -0.5px;
+            margin: 0 auto;
+            float: none;
         }
         
         header nav {
-            float: right;
+            float: none;
             margin-top: 10px;
+            clear: both;
         }
         
         header .highlight, header .current a {
             color: #5D9C59;
-            font-weight: bold;
+            font-weight: 500;
         }
         
         header a:hover {
-            color: #DDF7E3;
+            color: #5D9C59;
         }
         
         /* Hero Section with Zoom Effect */
+        /* Hero Section with Zoom Effect - No Text */
         #hero {
             height: 100vh;
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
             overflow: hidden;
+            margin-top: 80px;
         }
         
         #hero::before {
@@ -111,32 +124,6 @@
             background: url('images/Maximilian.jpg') no-repeat center center/cover;
             z-index: -1;
             animation: zoomBackground 20s ease-in-out infinite alternate;
-        }
-        
-        @keyframes zoomBackground {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.2);
-            }
-        }
-        
-        #hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            font-weight: 600;
-            letter-spacing: -1px;
-        }
-        
-        #hero p {
-            font-size: 26px;
-            max-width: 800px;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            font-weight: 400;
-            letter-spacing: -0.2px;
         }
         
         .button {
@@ -180,7 +167,10 @@
             letter-spacing: -0.022em;
         }
         
-        /* About Section */
+        #home {
+            padding-top: 80px;
+        }
+
         #over {
             background: #f4f4f4;
         }
@@ -269,16 +259,22 @@
         
         /* Media Queries */
         @media(max-width: 768px) {
-            header #branding,
-            header nav,
-            header li {
-                float: none;
-                text-align: center;
-                width: 100%;
+            header {
+                padding: 15px 0;
+                min-height: 80px;
             }
             
-            header {
-                padding-bottom: 20px;
+            header li {
+                padding: 0 10px;
+                margin-bottom: 5px;
+            }
+            
+            .logo {
+                height: 30px;
+            }
+            
+            #hero {
+                margin-top: 80px;
             }
             
             #hero h1 {
@@ -299,7 +295,7 @@
     <header>
         <div class="container">
             <div id="branding">
-                <img src="images/logo-no-background.png" alt="Bureau Florens Logo" class="logo">
+                <h1 class="text-logo"><span class="highlight">Bureau</span> Florens</h1>
             </div>
             <nav>
                 <ul>
@@ -313,9 +309,7 @@
     </header>
     
     <section id="hero">
-        <h1>Bureau Florens</h1>
-        <p>Waar mensen en systemen tot bloei komen</p>
-        <a href="#over" class="button">Ontdek meer</a>
+        <!-- Alleen achtergrondafbeelding, zonder tekst -->
     </section>
     
     <section id="home">
