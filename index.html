@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrainMaster - Professionele Trainingen</title>
+    <title>Bureau Florens - Waar mensen en systemen tot bloei komen</title>
     <style>
+        /* Apple SF Pro Font */
+        @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
             color: #333;
             scroll-behavior: smooth;
+            background-color: #f9f9f9;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .container {
             width: 85%;
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
+            padding: 0 20px;
         }
         
         header {
@@ -26,7 +33,11 @@
             color: white;
             padding-top: 30px;
             min-height: 70px;
-            border-bottom: #3498db 3px solid;
+            border-bottom: #5D9C59 3px solid;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
         }
         
         header a {
@@ -52,6 +63,8 @@
         
         header #branding h1 {
             margin: 0;
+            font-weight: 500;
+            letter-spacing: -0.5px;
         }
         
         header nav {
@@ -60,179 +73,154 @@
         }
         
         header .highlight, header .current a {
-            color: #3498db;
+            color: #5D9C59;
             font-weight: bold;
         }
         
         header a:hover {
-            color: #cccccc;
-            font-weight: bold;
+            color: #DDF7E3;
         }
         
-        /* Showcase - Piet Oudolf Garden Style */
-        #showcase {
-            min-height: 650px;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/api/placeholder/1200/800') no-repeat center;
-            background-size: cover;
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/Maximilian.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             color: white;
-            position: relative;
-            overflow: hidden;
+            padding: 0 20px;
         }
         
-        #showcase::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/api/placeholder/1200/800') no-repeat center;
-            background-size: cover;
-            animation: slowPan 40s ease-in-out infinite alternate;
-            z-index: -1;
-        }
-        
-        @keyframes slowPan {
-            0% {
-                transform: scale(1.05) translate(0%, 0%);
-            }
-            50% {
-                transform: scale(1.1) translate(-2%, -1%);
-            }
-            100% {
-                transform: scale(1.15) translate(-3%, -2%);
-            }
-        }
-        
-        #showcase h1 {
-            margin-top: 100px;
-            font-size: 50px;
-            margin-bottom: 10px;
+        #hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
             text-shadow: 2px 2px 5px #000;
+            font-weight: 600;
+            letter-spacing: -1px;
         }
         
-        #showcase p {
-            font-size: 20px;
+        #hero p {
+            font-size: 26px;
+            max-width: 800px;
             margin-bottom: 30px;
             text-shadow: 1px 1px 3px #000;
+            font-weight: 400;
+            letter-spacing: -0.2px;
         }
         
         .button {
             display: inline-block;
-            background: #3498db;
+            background: #5D9C59;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 22px;
             border: none;
             cursor: pointer;
             text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background 0.3s;
+            font-size: 17px;
+            border-radius: 980px;
+            transition: all 0.3s ease;
+            font-weight: 400;
+            letter-spacing: -0.022em;
         }
         
         .button:hover {
-            background: #2980b9;
+            background: #46874c;
         }
         
-        /* Newsletter */
-        #newsletter {
-            padding: 15px;
-            background: #2c3e50;
-            color: white;
+        /* Sections */
+        section {
+            padding: 80px 0;
         }
         
-        #newsletter h1 {
-            float: left;
-        }
-        
-        #newsletter form {
-            float: right;
-            margin-top: 15px;
-        }
-        
-        #newsletter input[type="email"] {
-            padding: 4px;
-            height: 25px;
-            width: 250px;
-            border-radius: 4px;
-            border: none;
-        }
-        
-        /* Training Boxes */
-        #trainings {
-            margin-top: 40px;
-        }
-        
-        #trainings .box {
-            width: 30%;
-            float: left;
-            padding: 15px;
+        section h2 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        section p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+        }
+        
+        /* About Section */
+        #over {
+            background: #f4f4f4;
+        }
+        
+        /* Trainingen Section */
+        .training-box {
             background: white;
+            padding: 30px;
+            margin-bottom: 30px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-right: 1.5%;
             transition: transform 0.3s;
         }
         
-        #trainings .box:hover {
+        .training-box:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        #trainings .box img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            background-color: #f4f4f4;
+        .training-box h3 {
+            color: #5D9C59;
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
         }
         
-        /* About */
-        #about {
-            padding: 30px 0;
-            background: #f4f4f4;
-            clear: both;
-        }
-        
-        #about .about-content {
-            width: 50%;
-            float: left;
-            padding-right: 30px;
-        }
-        
-        #about .about-image {
-            width: 45%;
-            float: right;
+        /* Contact Section */
+        #contact {
+            background: #2c3e50;
+            color: white;
             text-align: center;
+        }
+        
+        #contact h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            margin: 0 20px;
+            font-size: 20px;
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: #5D9C59;
         }
         
         /* Footer */
         footer {
-            background: #2c3e50;
+            background: #1a252f;
             color: white;
-            padding: 20px;
-            margin-top: 40px;
             text-align: center;
-            clear: both;
-        }
-        
-        footer a {
-            color: #3498db;
+            padding: 20px 0;
         }
         
         /* Media Queries */
         @media(max-width: 768px) {
             header #branding,
             header nav,
-            header li,
-            #newsletter h1,
-            #newsletter form,
-            #trainings .box,
-            #about .about-content,
-            #about .about-image {
+            header li {
                 float: none;
                 text-align: center;
                 width: 100%;
@@ -242,23 +230,16 @@
                 padding-bottom: 20px;
             }
             
-            #showcase h1 {
-                margin-top: 60px;
+            #hero h1 {
+                font-size: 36px;
             }
             
-            #newsletter form button, .quote button {
-                display: block;
-                width: 100%;
-                margin-top: 10px;
+            #hero p {
+                font-size: 18px;
             }
             
-            #newsletter input[type="email"] {
-                width: 100%;
-            }
-            
-            #trainings .box {
-                margin-bottom: 20px;
-                margin-right: 0;
+            section {
+                padding: 40px 0;
             }
         }
     </style>
@@ -267,92 +248,114 @@
     <header>
         <div class="container">
             <div id="branding">
-                <h1><span class="highlight">Natuur</span>Training</h1>
+                <h1><span class="highlight">Bureau</span> Florens</h1>
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="#trainings">Trainingen</a></li>
-                    <li><a href="#about">Over Ons</a></li>
+                    <li class="current"><a href="#hero">Home</a></li>
+                    <li><a href="#over">Over Ons</a></li>
+                    <li><a href="#trainingen">Trainingen</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
-    <section id="showcase">
+    <section id="hero">
+        <h1>Bureau Florens</h1>
+        <p>Waar mensen en systemen tot bloei komen</p>
+        <a href="#over" class="button">Ontdek meer</a>
+    </section>
+    
+    <section id="home">
         <div class="container">
-            <h1>Inspirerende Trainingen in de Natuur</h1>
-            <p>Ontdek de kracht van natuurlijke omgevingen voor persoonlijke en professionele groei</p>
-            <p style="font-style: italic; font-size: 16px; margin-bottom: 30px;">Geïnspireerd door de natuurlijke tuinontwerpen van Piet Oudolf</p>
-            <a href="#trainings" class="button">Ontdek onze trainingen</a>
+            <h2>Welkom bij Bureau Florens</h2>
+            <p>Vastgelopen processen weer in beweging brengen, eigen regie versterken en krachtbronnen benutten: dat is de kern van onze trainingen. Bureau Florens biedt inspirerende en praktische trainingen in oplossingsgericht werken en motiverende gespreksvoering.</p>
+            <p>Door te verbinden met de mensen om ons heen en nieuw perspectief te creëren, ontstaat er ruimte voor duurzame verandering.</p>
         </div>
     </section>
     
-    <section id="newsletter">
+    <section id="over">
         <div class="container">
-            <h1>Schrijf je in voor onze nieuwsbrief</h1>
-            <form>
-                <input type="email" placeholder="Vul je e-mailadres in...">
-                <button type="submit" class="button">Inschrijven</button>
-            </form>
+            <h2>Over Bureau Florens</h2>
+            <p>Bureau Florens is opgericht met een heldere missie: het laten groeien van mensen en systemen. Vanuit een diepgeworteld geloof in eigen regie en veerkracht helpen we professionals om de juiste vragen te stellen, patronen te doorbreken en beweging te creëren waar het vastloopt.</p>
+            <p>Onze trainingen zijn praktisch, interactief en direct toepasbaar in de dagelijkse praktijk.</p>
         </div>
     </section>
     
-    <section id="trainings">
+    <section id="trainingen">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 30px;">Onze Trainingen</h2>
-            <div class="box">
-                <img src="/api/placeholder/100/100" alt="Natuurlijk Leiderschap">
-                <h3>Natuurlijk Leiderschap</h3>
-                <p>Ontdek hoe natuurlijke principes je leiderschap kunnen versterken. Training in een inspirerende tuinomgeving.</p>
-                <a href="#" class="button">Meer Info</a>
+            <h2>Trainingen</h2>
+            <p>Bij Bureau Florens kun je terecht voor trainingen in:</p>
+            
+            <div class="training-box">
+                <h3>Oplossingsgericht Werken</h3>
+                <p>Leer hoe je gesprekken richt op mogelijkheden en vooruitgang, in plaats van op problemen. Ontdek hoe kleine veranderingen grote impact kunnen hebben en hoe je krachtbronnen effectief benut.</p>
             </div>
-            <div class="box">
-                <img src="/api/placeholder/100/100" alt="Mindfulness in de Tuin">
-                <h3>Mindfulness in de Tuin</h3>
-                <p>Vind rust en focus in een prachtig ontworpen natuurlijke omgeving, geïnspireerd door Piet Oudolf's tuinfilosofie.</p>
-                <a href="#" class="button">Meer Info</a>
+            
+            <div class="training-box">
+                <h3>Motiverende Gespreksvoering</h3>
+                <p>Versterk intrinsieke motivatie en help anderen om zelf tot duurzame gedragsverandering te komen. Je leert hoe je weerstand ombuigt naar betrokkenheid en hoe je samen werkt aan een haalbaar doel.</p>
             </div>
-            <div class="box">
-                <img src="/api/placeholder/100/100" alt="Teambuilding in het Groen">
-                <h3>Teambuilding in het Groen</h3>
-                <p>Versterk teamverbanden en samenwerking door middel van activiteiten in een inspirerende natuurlijke setting.</p>
-                <a href="#" class="button">Meer Info</a>
-            </div>
+            
+            <p>Onze trainingen zijn praktisch, inspirerend en gericht op directe toepassing in de praktijk. Neem contact op voor maatwerk of open inschrijvingen.</p>
         </div>
     </section>
     
-    <section id="about" style="clear: both; padding-top: 40px;">
+    <section id="contact">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 30px;">Over Ons</h2>
-            <div class="about-content">
-                <h3>Wie Wij Zijn</h3>
-                <p>NatuurTraining is ontstaan vanuit een passie voor de heilzame werking van natuurlijke omgevingen op ons welzijn en onze prestaties. Geïnspireerd door de organische tuinontwerpen van Piet Oudolf, hebben we een uniek trainingscentrum gecreëerd waar natuurlijke schoonheid en professionele ontwikkeling samenkomen.</p>
-                <p>Onze trainers combineren expertise op het gebied van persoonlijke ontwikkeling met een diepgaande kennis van hoe natuurlijke omgevingen ons denken en functioneren positief beïnvloeden.</p>
-                <h3>Onze Aanpak</h3>
-                <p>Net zoals in een Piet Oudolf tuin, waar elke plant zijn eigen rol speelt in het grotere geheel, geloven wij in de uniciteit van elk individu. Onze trainingen vinden plaats in zorgvuldig ontworpen tuinomgevingen die de seizoenen vieren en die rust, inspiratie en verbinding stimuleren.</p>
-                <p>We bieden een combinatie van reflectie, praktische oefeningen en natuurbeleving om diepgaande en blijvende verandering te bewerkstelligen.</p>
+            <h2>Contact</h2>
+            <p>Wil je meer weten over onze trainingen of direct een afspraak maken? Neem vrijblijvend contact op.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i>📧</i> E-mail: florismunneke@gmail.com
+                </div>
+                <div class="contact-item">
+                    <i>📞</i> Telefoon: 0644098996
+                </div>
             </div>
-            <div class="about-image">
-                <img src="/api/placeholder/400/300" alt="Training in actie" style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" style="clear: both; padding: 40px 0; text-align: center;">
-        <div class="container">
-            <h2>Neem Contact Met Ons Op</h2>
-            <p>Interesse in onze trainingen of wil je meer informatie? Neem vandaag nog contact met ons op!</p>
-            <p><strong>Email:</strong> info@trainmaster.nl</p>
-            <p><strong>Telefoon:</strong> 030-1234567</p>
-            <a href="#" class="button">Stuur Bericht</a>
         </div>
     </section>
     
     <footer>
-        <p>NatuurTraining, Copyright &copy; 2025 | <a href="#">Privacybeleid</a> | <a href="#">Algemene Voorwaarden</a></p>
-        <p style="margin-top: 10px; font-style: italic; font-size: 14px;">Onze tuinen en trainingsfilosofie zijn geïnspireerd door het werk van Piet Oudolf</p>
+        <div class="container">
+            <p>&copy; 2025 Bureau Florens - Alle rechten voorbehouden</p>
+        </div>
     </footer>
+    
+    <script>
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Active menu item on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('header nav ul li').forEach(li => {
+                li.classList.remove('current');
+                if (li.querySelector('a').getAttribute('href') === `#${current}`) {
+                    li.classList.add('current');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
