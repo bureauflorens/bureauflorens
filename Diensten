@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diensten — Bureau Florens</title>
+  <meta name="description" content="Diensten van Bureau Florens: team- en organisatiebegeleiding, training en scholing, systeemtherapie." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Hoofdnavigatie">
+      <div class="nav__brand">
+        <a href="index.html" class="brand">
+          <span class="brand__mark" aria-hidden="true">BF</span>
+          <span class="brand__text">Bureau Florens</span>
+        </a>
+      </div>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+      <div id="navMenu" class="nav__menu">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link is-active" href="diensten.html">Diensten</a>
+        <a class="nav__link" href="werkwijze.html">Werkwijze</a>
+        <a class="nav__link" href="over.html">Over</a>
+        <a class="nav__link nav__cta" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Diensten</h1>
+        <p class="lead">
+          Bureau Florens werkt met zorgteams en gezinnen. Altijd vanuit één lijn:
+          praktisch, menselijk en gericht op wat wél werkt.
+        </p>
+        <div class="pillrow" role="list">
+          <a class="pill" href="#teams" role="listitem">Teams</a>
+          <a class="pill" href="#training" role="listitem">Training</a>
+          <a class="pill" href="#therapie" role="listitem">Systeemtherapie</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="teams" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Team- &amp; organisatiebegeleiding</h2>
+          <p>Voor vastgelopen samenwerking, onduidelijke regie of terugkerende escalaties.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div>
+            <h3>Wat je kunt verwachten</h3>
+            <ul class="bullets">
+              <li>Snelle analyse van patronen, rollen, afspraken en communicatie.</li>
+              <li>Concrete interventies op de werkvloer: wat doen we morgen anders?</li>
+              <li>Heldere werkafspraken die óók vol te houden zijn.</li>
+              <li>Borging: hoe blijft het werken als ik weg ben?</li>
+            </ul>
+          </div>
+          <div class="callout">
+            <h3>Typische vraagstukken</h3>
+            <ul class="checklist">
+              <li>“We praten veel, maar er verandert weinig.”</li>
+              <li>“Iedereen trekt aan een andere kant.”</li>
+              <li>“Escalaties blijven terugkomen.”</li>
+              <li>“Er is weinig eigenaarschap / te veel afhankelijkheid.”</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="training" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Training &amp; scholing</h2>
+          <p>Praktische trainingen die teams direct sterker maken in dagelijkse gesprekken en keuzes.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="feature">
+            <h3>Oplossingsgericht werken</h3>
+            <p>Van probleemtaal naar doeltaal, kleine stappen, schaalvragen, uitzonderingen en voortgang.</p>
+          </article>
+          <article class="feature">
+            <h3>Systemisch kijken</h3>
+            <p>Patronen herkennen, posities innemen, loyaliteiten begrijpen en beweging creëren.</p>
+          </article>
+          <article class="feature">
+            <h3>Werkplezier &amp; samenwerking</h3>
+            <p>Regie, rolhelderheid, feedback, en afspraken die het makkelijker maken.</p>
+          </article>
+        </div>
+
+        <div class="cta-banner">
+          <div>
+            <h3>Wil je een training op maat?</h3>
+            <p>Ik pas inhoud en werkvormen aan op jullie casuïstiek, taal en context.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Vraag een voorstel</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="therapie" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Systeemtherapie</h2>
+          <p>Voor gezinnen en systemen waar patronen blijven terugkeren.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div>
+            <h3>Waar we aan werken</h3>
+            <ul class="bullets">
+              <li>Hardnekkige interactiepatronen ombuigen.</li>
+              <li>Verbinding herstellen zonder jezelf kwijt te raken.</li>
+              <li>Veiligheid, grenzen en samenwerking in het systeem.</li>
+              <li>Nieuwe verhalen en nieuwe mogelijkheden.</li>
+            </ul>
+            <p class="muted">
+              *Dit is een algemene omschrijving. Praktische details (locatie/contracten) stemmen we af via contact.*
+            </p>
+          </div>
+          <div class="callout">
+            <h3>Kennismaken</h3>
+            <p>
+              Stuur kort: wie zijn jullie, wat is de vraag, en wat hebben jullie al geprobeerd.
+              Dan reageer ik met een passende eerste stap.
+            </p>
+            <a class="btn btn--primary" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h3>Niet zeker wat past?</h3>
+            <p>In een kennismaking brengen we snel scherp: wat is de hefboom en welke route klopt.</p>
+          </div>
+          <a class="btn btn--ghost" href="werkwijze.html">Bekijk werkwijze</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand__mark" aria-hidden="true">BF</span>
+          <span class="brand__text">Bureau Florens</span>
+        </div>
+        <p class="muted">Oplossingsgericht • Systemisch • Positieve gezondheid • Werkplezier</p>
+      </div>
+      <div class="footer__links">
+        <a href="diensten.html">Diensten</a>
+        <a href="werkwijze.html">Werkwijze</a>
+        <a href="over.html">Over</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__small muted">
+        <p>© <span id="year"></span> Bureau Florens</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
